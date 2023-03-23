@@ -7,8 +7,10 @@ public class Main {
 	        System.out.println("SBI Rate of Interest: " + b.getRateOfInterest());
 	        b = new ICICI();
 	        System.out.println("ICICI Rate of Interest: " + b.getRateOfInterest());
-	        b = new AXIS();
+	        AXIS  c = new AXIS();
 	        System.out.println("AXIS Rate of Interest: " + b.getRateOfInterest());
+	     
+	        
 	
 	}
 }
