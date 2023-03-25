@@ -1,4 +1,4 @@
-package assignment01.entity;
+package assignment02.Exercise2.com.vti.entity.exercise1;
 
 public class Department {
 	private Long departmentID;
