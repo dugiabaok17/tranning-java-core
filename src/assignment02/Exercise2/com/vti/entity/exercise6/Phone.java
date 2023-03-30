@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Phone {
-	protected List<Contacts> list;
+	public List<Contacts> list;
 
 	public Phone() {
 		this.list = new ArrayList<>();
+		
 	}
 
 	public abstract void insertContact(String name, String phone);
@@ -17,5 +18,7 @@ public abstract class Phone {
 	public abstract void updateContact(String name, String newPhone);
 
 	public abstract void searchContact(String name);
+	
+	public abstract void findAllContact();
 
 }

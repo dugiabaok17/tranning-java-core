@@ -46,15 +46,16 @@ public class Exercise5 {
 			case 4:
 				System.out.println(this.delete());
 				break;
+				
+			case 0: 
+				System.exit(enter);
 
 			default:
 				System.out.println("Xin mời bạn chọn 0 -> 4");
 				break;
 			}
 
-			if (enter == 0) {
-				System.exit(0);
-			}
+			
 
 		} while (true);
 
