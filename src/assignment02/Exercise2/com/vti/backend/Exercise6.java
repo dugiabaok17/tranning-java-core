@@ -71,19 +71,10 @@ public class Exercise6 {
 			case 5: {
 				System.out.println("Xin mời bạn nhập tên cần sửa");
 				String updateName = ScannerUtils.inputString(sc, "");
-				List<Contacts> listContactName = p.list.stream()
-						.filter(data -> data.getName().equalsIgnoreCase(updateName)).toList();
-				if (listContactName.size() > 0) {
-					System.out.println("Xin moi bạn nhập tên liên hệ cần update: ");
-					String name = ScannerUtils.inputString(sc, "");
-					System.out.println("Xin moi bạn nhập số điện thoại: ");
-					String phone = ScannerUtils.inputString(sc, "");
-					p.list.set(0, new Contacts(name, phone));
-					System.out.println("update thành công");
-				} else {
-					System.out.println("không tìm thấy");
-				}
-
+				System.out.println("Xin moi bạn nhập số điện thoại: ");
+				String phone = ScannerUtils.inputString(sc, "");
+				p.updateContact(updateName, phone);
+		
 				break;
 			}
 			case 0: {
@@ -116,21 +107,21 @@ public class Exercise6 {
 
 				System.out.println("Xin moi bạn nhập nội dung bài viết: ");
 				String content = ScannerUtils.inputString(sc, "");
-				
+
 				System.out.println("Xin mời bạn nhập đánh giá lần thứ 1 ");
 				int firstTime = ScannerUtils.inputInt(sc, "xin mời bạn nhập là số");
 				System.out.println("Xin mời bạn nhập đánh giá lần thứ 2 ");
 				int secondTime = ScannerUtils.inputInt(sc, "xin mời bạn nhập là số");
 				System.out.println("Xin mời bạn nhập đánh giá lần thứ 3 ");
 				int threeTime = ScannerUtils.inputInt(sc, "xin mời bạn nhập là số");
-				int[] arr = {firstTime,secondTime,threeTime};
-				
+				int[] arr = { firstTime, secondTime, threeTime };
+
 				News n = new News(title, LocalDate.now().toString(), author, content);
-				
+
 				arrList.add(n);
 				n.display();
-				System.out.println("averageRate: "+ n.caculate(arr));
-			
+				System.out.println("averageRate: " + n.caculate(arr));
+
 				break;
 			}
 
@@ -139,9 +130,8 @@ public class Exercise6 {
 				break;
 			}
 
-			case 3:
-			{
-				
+			case 3: {
+
 			}
 			case 0: {
 				System.exit(enter);

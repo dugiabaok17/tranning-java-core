@@ -36,8 +36,11 @@ public class VietnamesePhone extends Phone {
 	}
 
 	@Override
-	public void updateContact(String name, String newPhone) {
-		
+	public String updateContact(String name, String newPhone) {
+
+	  return list.stream().filter(data -> data.getName().equalsIgnoreCase(name)).map(item -> {
+		 item.setPhoneNumber(newPhone); 
+	  });
 		
 
 	}

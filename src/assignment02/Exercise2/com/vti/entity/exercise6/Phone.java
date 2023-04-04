@@ -15,7 +15,7 @@ public abstract class Phone {
 
 	public abstract void  removeContact(String name);
 
-	public abstract void updateContact(String name, String newPhone);
+	public abstract String updateContact(String name, String newPhone);
 
 	public abstract void searchContact(String name);
 	

@@ -49,7 +49,7 @@ public class Cadres {
 
 	@Override
 	public String toString() {
-		return "Cadres [name=" + name + ", age=" + age + ", gender=" + gender + ", address=" + address + "]";
+		return "name=" + name + ", age=" + age + ", gender=" + gender + ", address=" + address ;
 	}
 	
 	
